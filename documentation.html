@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neural UI Docs</title>
+    <link rel="stylesheet" href="doc-layout.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./highlight_styles/atom-one-dark.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script
+      src="https://kit.fontawesome.com/17540dc721.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="content">
+      <button class="btn btn-col btn-primary btn-float" id="menu-btn">
+        <i class="fas fa-bars menu icon-med"></i>
+      </button>
+      <nav class="leftfixed-nav p-1-0" id="menu">
+        <div class="top-element">
+          <a href="./index.html" class="logo">
+            <img src="/images/circle_img.png" alt="" />
+            <h3>Neural UI</h3>
+          </a>
+          <button class="m-0-05 btn btn-icon" id="menu-close">
+            <i class="fas fa-times icon-med"></i>
+          </button>
+        </div>
+        <a class="nav-element-link mt-05 active" href="#install"
+          >Installation</a
+        >
+        <a class="nav-element-link mt-05" href="#utilities">Utilities</a>
+        <a class="nav-element-link mt-05" href="#text">Text Utilities</a>
+        <a class="nav-element-link mt-05" href="#alerts">Alerts</a>
+        <a class="nav-element-link mt-05" href="#avatars">Avatars</a>
+        <a class="nav-element-link mt-05" href="#badges">Badges</a>
+        <a class="nav-element-link mt-05" href="#buttons">Buttons</a>
+        <a class="nav-element-link mt-05" href="#cards">Cards</a>
+        <a class="nav-element-link mt-05" href="#navigation">Navigation</a>
+        <a class="nav-element-link mt-05" href="#input">Input</a>
+        <a class="nav-element-link mt-05" href="#image">Images</a>
+        <a class="nav-element-link mt-05" href="#modals">Modal</a>
+        <a class="nav-element-link mt-05" href="#grid">Grids</a>
+      </nav>
+      <div class="right-displaysection">
+        <div id="install">
+          <h1 class="mt-2 uppercase letter-spaced">Installation</h1>
+          <p class="font-size-sm light mt-05">
+            Copy the following css link in the head tag of your HTML document and the JS link before the closing body tag and
+            you are good to go.
+          </p>
+          <pre class="m-1-0"><code class="border-round">
+&lt;link rel="stylesheet" href="https://neural-ui.netlify.app/style.css" /&gt;
+
+&lt;script src="https://neural-ui.netlify.app/script.js"&gt;&lt;/script&gt;
+
+</code></pre>
+        <p class="font-size-sm light">The icons used in this library are from Font Awesome. You can get your own CDN link <a href="https://fontawesome.com/">here</a></p>
+        </div>
+        <div id="utilities">
+          <h1 class="font-size-xl bold uppercase letter-spaced mt-1">
+            Utilities
+          </h1>
+          <div class="mt-1">
+            <h1 class="font-size-sm light">
+              Here are some of the ultilities which can be used with other
+              components to make your work easy 😄
+            </h1>
+
+            <h2 class="mt-1">(1) Spacing Utilities : Paddings & Margins</h2>
+            <p class="light font-size-sm mt-05">
+              All the values will be using rem unit
+            </p>
+            <p class="medium font-size-m mt-1">- Single value classes</p>
+            <p class="light font-size-sm mt-02 ml-2">
+              The value given in single value padding & margin classes will be
+              applied to all four sides
+            </p>
+            <pre class="m-1-0"><code class="border-round">
+&lt;div class="p-1 m-2"&gt;
+  &lt;!-- Your content here  --&gt;
+&lt;/div&gt;
+
+</code></pre>
+            <p class="light font-size-sm">
+              <span class="medium">Class syntax padding:</span> p-value
+            </p>
+            <p class="light font-size-sm mt-05">
+              <span class="medium">Class syntax margin:</span> m-value
+            </p>
+
+            <p class="light font-size-sm mt-05">
+              Where value can be from (05, 1, 2, 3, 4)
+            </p>
+            <p class="medium font-size-m mt-2">- Double value classes</p>
+            <p class="light font-size-sm ml-2 mt-02">
+              The first value given in double value padding classes will be
+              applied to top and bottom and second value is for left and right
+              sides
+            </p>
+            <pre class="m-1-0"><code class="border-round">
+&lt;div class="p-1-2 m-0-2"&gt;
+  &lt;!-- Your content here  --&gt;
+&lt;/div&gt;
+
+</code></pre>
+            <p class="light font-size-sm mt-05">
+              <span class="medium">Class syntax padding:</span>
+              p-firstValue-secondValue
+            </p>
+            <p class="light font-size-sm mt-05">
+              <span class="medium">Class syntax margin:</span>
+              m-firstValue-secondValue
+            </p>
+            <p class="light font-size-sm mt-05">
+              where firstValue and secondValue can be from (0, 05, 1, 2, 3, 4)
+            </p>
+            <p class="medium font-size-m mt-2">- Direction specific classes</p>
+            <p class="light font-size-sm mt-02">
+              The value given to direction specific classes of margin & padding
+              will be applied accordingly in the direction specified with given
+              value
+            </p>
+            <pre class="m-1-0"><code class="border-round">
+&lt;div class="pt-1 pb-1 pr-3 pl-0"&gt;
+  &lt;!-- Your content here  --&gt;
+&lt;/div&gt;
+
+&lt;div class="mt-1 mb-1 mr-3 ml-0"&gt;
+  &lt;!-- Your content here  --&gt;
+&lt;/div&gt;
+
+</code></pre>
+            <p class="light font-size-sm mt-05">
+              <span class="medium">Class syntax padding:</span>
+            </p>
+            <p class="light font-size-sm mt-05">
+              padding-top = pt-value, padding-bottom = pb-value, padding-left =
+              pl-value, padding-right = pr-value
+            </p>
+            <p class="light font-size-sm mt-05">
+              <span class="medium">Class syntax margin:</span>
+            </p>
+            <p class="light font-size-sm mt-05">
+              margin-top = mt-value, margin-bottom = mb-value, margin-left =
+              ml-value, margin-right = mr-value,
+            </p>
+            <p class="light font-size-sm mt-05">
+              where value can be from (05, 1, 2, 3, 4)
+            </p>
+          </div>
+          <h2 class="mt-2">(2) Colors</h2>
+          <div>
+            <p class="medium font-size-sm mt-05">
+              Utility classes for background color(bg) and foreground
+              color(color)
+            </p>
+            <div class="flex align-center flex-wrap colors mt-1">
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgWhite</p>
+                <p class="center mt-05 medium font-size-sm">colorWhite</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div class="width-100px min-height60px bgGray bd1 bdGray"></div>
+                <p class="center mt-05 medium font-size-sm">bgGray</p>
+                <p class="center mt-05 medium font-size-sm">colorWhite</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgDarkGray bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgDarkGray</p>
+                <p class="center mt-05 medium font-size-sm">colorDarkGray</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgLightRed bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgLightRed</p>
+                <p class="center mt-05 medium font-size-sm">colorLightRed</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgLightGreen bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgLightGreen</p>
+                <p class="center mt-05 medium font-size-sm">colorLightGreen</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgLightYellow bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgLightYellow</p>
+                <p class="center mt-05 medium font-size-sm">colorLightYellow</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgLightBlue bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgLightBlue</p>
+                <p class="center mt-05 medium font-size-sm">colorLightBlue</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div class="width-100px min-height60px bgBlue bd1 bdGray"></div>
+                <p class="center mt-05 medium font-size-sm">bgBlue</p>
+                <p class="center mt-05 medium font-size-sm">colorBlue</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div class="width-100px min-height60px bgRed bd1 bdGray"></div>
+                <p class="center mt-05 medium font-size-sm">bgRed</p>
+                <p class="center mt-05 medium font-size-sm">colorRed</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgGreen bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgGreen</p>
+                <p class="center mt-05 medium font-size-sm">colorGreen</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgPurple bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgPurple</p>
+                <p class="center mt-05 medium font-size-sm">colorPurple</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgAlertRed bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgAlertRed</p>
+                <p class="center mt-05 medium font-size-sm">colorAlertRed</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgAlertGreen bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgAlertGreen</p>
+                <p class="center mt-05 medium font-size-sm">colorAlertGreen</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgAlertYellow bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgAlertYellow</p>
+                <p class="center mt-05 medium font-size-sm">colorAlertYellow</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgAlertBlue bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bgAlertBlue</p>
+                <p class="center mt-05 medium font-size-sm">colorAlertBlue</p>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-2">(3) Borders</h2>
+          <div>
+            <p class="medium font-size-sm mt-05">Utility classes for borders</p>
+            <div class="flex align-center flex-wrap colors mt-1">
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd1 bdGray"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd1</p>
+                <p class="center mt-05 medium font-size-sm">bdGray</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd2 bdBlack"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd2</p>
+                <p class="center mt-05 medium font-size-sm">bdBlack</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd3 bdBlue"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd3</p>
+                <p class="center mt-05 medium font-size-sm">bdBlue</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd4 bdGreen"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd4</p>
+                <p class="center mt-05 medium font-size-sm">bdGreen</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd4 bdPurple"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd4</p>
+                <p class="center mt-05 medium font-size-sm">bdPurple</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd4 bdYellow"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd4</p>
+                <p class="center mt-05 medium font-size-sm">bdYellow</p>
+              </div>
+              <div
+                class="flex flex-column align-center mr-1 mt-1 p-05 bd1 bdGray"
+              >
+                <div
+                  class="width-100px min-height60px bgWhite bd2 bdBlack border-round"
+                ></div>
+                <p class="center mt-05 medium font-size-sm">bd2</p>
+                <p class="center mt-05 medium font-size-sm">border-round</p>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-2">(4) Flex</h2>
+          <table border="1" class="mt-1">
+            <thead>
+              <th>Property</th>
+              <th>Utility</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>display: flex;</td>
+                <td>flex</td>
+              </tr>
+              <tr>
+                <td>justify-content: space-between</td>
+                <td>justify-sb</td>
+              </tr>
+              <tr>
+                <td>align-items: center</td>
+                <td>align-center</td>
+              </tr>
+              <tr>
+                <td>flex-direction: column</td>
+                <td>flex-column</td>
+              </tr>
+              <tr>
+                <td>flex-wrap: wrap;</td>
+                <td>flex-wrap</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="text">
+          <h1 class="uppercase letter-spaced mt-2">Text Utilities</h1>
+          <div class="mt-1">
+            <h1 class="font-size-xl extra-bold mt-02">
+              This is extra large text with extra bold weight
+            </h1>
+            <h1 class="font-size-l bold mt-02">
+              This is large text with bold weight.
+            </h1>
+            <h1 class="font-size-m medium mt-02">
+              This is medium text with medium weight.
+            </h1>
+            <h1 class="font-size-sm light mt-02">
+              This is small text with light weight.
+            </h1>
+            <h1 class="font-size-xsm extra-light mt-02">
+              This is extra small text with extra light weight.
+            </h1>
+            <p class="font-size-m medium grayText mt-02">This is gray text.</p>
+            <p class="font-size-m medium center mt-02">
+              This is centered text.
+            </p>
+            <p class="font-size-m medium uppercase mt-02">
+              this is uppercase text.
+            </p>
+            <p class="font-size-m medium letter-spaced mt-02">
+              This is text with some letter spacing.
+            </p>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;h1 class="font-size-xl extra-bold"&gt;This is extra large text with extra bold weight&lt;/h1&gt;
+&lt;h1 class="font-size-l bold"&gt;This is large text with bold weight.&lt;/h1&gt;
+&lt;h1 class="font-size-m medium"&gt;This is medium text with medium weight.&lt;/h1&gt;
+&lt;h1 class="font-size-sm light"&gt;This is small text with light weight.&lt;/h1&gt;
+&lt;h1 class="font-size-xsm extra-light"&gt;This is extra small text with extra light weight.&lt;/h1&gt;
+&lt;p class="font-size-m medium grayText"&gt;This is gray text.&lt;/p&gt;
+&lt;p class="font-size-m medium center"&gt;This is centered text.&lt;/p&gt;
+&lt;p class="font-size-m medium uppercase"&gt;this is uppercase text.&lt;/p&gt;
+&lt;p class="font-size-m medium letter-spaced"&gt;This is text with some letter spacing.&lt;/p&gt;
+
+</code></pre>
+        </div>
+        <div id="alerts">
+          <h1 class="mt-2 uppercase letter-spaced">Alerts</h1>
+          <div class="grid-container stacked-list mt-2">
+            <div class="alert p-1 bgLightRed flex align-center justify-sb">
+              <div class="alert-content flex align-center">
+                <i class="fas fa-exclamation-circle mr-1 icon-med alertred"></i>
+                <p>There was an error processing your request</p>
+              </div>
+              <i class="fas fa-times-circle icon-med alertred alert-close"></i>
+            </div>
+            <div class="alert p-1 bgLightGreen flex align-center justify-sb">
+              <div class="alert-content flex align-center">
+                <i class="fas fa-check-circle mr-1 icon-med alertgreen"></i>
+                <p>Data uploaded to the server. Fire on!</p>
+              </div>
+              <i
+                class="fas fa-times-circle icon-med alertgreen alert-close"
+              ></i>
+            </div>
+            <div class="alert p-1 bgLightYellow flex align-center justify-sb">
+              <div class="alert-content flex align-center">
+                <i
+                  class="fas fa-exclamation-triangle mr-1 icon-med alertyellow"
+                ></i>
+                <p>Seems your account is about to expire, upgrade now</p>
+              </div>
+              <i
+                class="fas fa-times-circle icon-med alertyellow alert-close"
+              ></i>
+            </div>
+            <div class="alert p-1 bgLightBlue flex align-center justify-sb">
+              <div class="alert-content flex align-center">
+                <i class="fas fa-info-circle mr-1 icon-med alertblue"></i>
+                <p>Panda is going live on August 30th. Get ready!</p>
+              </div>
+              <i class="fas fa-times-circle icon-med alertblue alert-close"></i>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="alert p-1 bgLightRed flex align-center justify-sb"&gt;
+  &lt;div class="alert-content flex align-center"&gt;
+    &lt;i class="fas fa-exclamation-circle mr-1 icon-med alertred"&gt;&lt;/i&gt;
+    &lt;p&gt;There was an error processing your request&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;i class="fas fa-times-circle icon-med alertred alert-close"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div class="alert p-1 bgLightGreen flex align-center justify-sb"&gt;
+  &lt;div class="alert-content flex align-center"&gt;
+  	&lt;i class="fas fa-check-circle mr-1 icon-med alertgreen"&gt;&lt;/i&gt;
+  	&lt;p&gt;Data uploaded to the server. Fire on!&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;i class="fas fa-times-circle icon-med alertgreen alert-close"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div class="alert p-1 bgLightYellow flex align-center justify-sb"&gt;
+   &lt;div class="alert-content flex align-center"&gt;
+     &lt;i class="fas fa-exclamation-triangle mr-1 icon-med alertyellow"&gt;&lt;/i&gt;
+     &lt;p&gt;Seems your account is about to expire, upgrade now&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class="fas fa-times-circle icon-med alertyellow alert-close"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div class="alert p-1 bgLightBlue flex align-center justify-sb"&gt;
+   &lt;div class="alert-content flex align-center"&gt;
+      &lt;i class="fas fa-info-circle mr-1 icon-med alertblue"&gt;&lt;/i&gt;
+      &lt;p&gt;Panda is going live on August 30th. Get ready!&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class="fas fa-times-circle icon-med alertblue alert-close"&gt;&lt;/i&gt;
+&lt;/div&gt;
+        </code></pre>
+        </div>
+        <div id="avatars">
+          <h1 class="mt-2 uppercase letter-spaced">Avatars</h1>
+          <div class="avatars mt-2 flex align-center justify-sb">
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/2951142/pexels-photo-2951142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_960_720.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="avatar-wrapper circle av-sm"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+</code></pre>
+          <div class="avatars mt-2 flex align-center justify-sb">
+            <div class="avatar-wrapper circle av-sm bd4 bdPurple">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm bd4 bdBlue">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/2951142/pexels-photo-2951142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm bd4 bdGreen">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-sm bd3 bdGray">
+              <img
+                class="avatar-img circle"
+                src="https://cdn.pixabay.com/photo/2017/11/10/05/48/user-2935527_960_720.png"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="avatar-wrapper circle av-sm bd4 bdPurple"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm bd4 bdBlue"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm bd4 bdGreen"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm bd3 bdGray"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+</code></pre>
+          <div class="avatars mt-2 flex align-center justify-sb flex-wrap">
+            <div class="avatar-wrapper circle av-tiny">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                alt=""
+              />
+            </div>
+            <div class="avatar-wrapper circle av-mini">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80"
+                alt=""
+              />
+            </div>
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-md">
+              <img
+                class="avatar-img circle"
+                src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt=""
+              />
+            </div>
+
+            <div class="avatar-wrapper circle av-lg">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1520998116484-6eeb2f72b5b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                alt=""
+              />
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="avatar-wrapper circle av-tiny"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-mini"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-md"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-lg"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt="" /&gt;
+&lt;/div&gt;
+
+</code></pre>
+        </div>
+        <div id="badges">
+          <h1 class="mt-2 uppercase letter-spaced">Badge</h1>
+          <div class="badges mt-2 p-12 flex align-center justify-sb">
+            <i class="fas fa-bell icon-lg icon-badge">
+              <span class="badge bd3 bdWhite circle bdg-tr bdg-num bdg-blue">14</span>
+            </i>
+            <i class="fas fa-bell icon-lg icon-badge">
+              <span
+                class="badge circle bdg-tr bdg-dot bdg-red bd4 bdWhite"
+              ></span>
+            </i>
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+              <span
+                class="badge badge-avtr circle bdg-dot bdg-green bd4 bdWhite"
+              ></span>
+            </div>
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+              <span
+                class="badge badge-avtr circle bdg-dot bdg-red bd4 bdWhite"
+              ></span>
+            </div>
+            <div class="avatar-wrapper circle av-sm">
+              <img
+                class="avatar-img circle"
+                src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt=""
+              />
+              <span
+                class="badge badge-avtr circle bdg-dot bdg-gray bd4 bdWhite"
+              ></span>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;i class="fas fa-bell icon-lg icon-badge"&gt;
+   &lt;span class="badge circle bdg-tr bdg-num bdg-blue"&gt;4&lt;/span&gt;
+&lt;/i&gt;
+
+&lt;i class="fas fa-bell icon-lg icon-badge"&gt;
+   &lt;span class="badge circle bdg-tr bdg-dot bdg-red bd4 bdWhite"&gt;&lt;/span&gt;
+&lt;/i&gt;
+
+&lt;div class="avatar-wrapper circle av-sm"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt=""/&gt;
+   &lt;span class="badge badge-avtr circle bdg-dot bdg-green bd4 bdWhite"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt=""/&gt;
+   &lt;span class="badge badge-avtr circle bdg-dot bdg-red bd4 bdWhite"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="avatar-wrapper circle av-sm"&gt;
+   &lt;img class="avatar-img circle" src="your_img_url" alt=""/&gt;
+   &lt;span class="badge badge-avtr circle bdg-dot bdg-gray bd4 bdWhite"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+</code></pre>
+        </div>
+        <div id="buttons">
+          <h1 class="mt-2 uppercase letter-spaced">Buttons</h1>
+          <div class="buttons mt-1 flex justify-sb align-center flex-wrap">
+            <button class="m-0-05 btn btn-col btn-primary border-round">
+              Primary Button
+            </button>
+            <button class="m-0-05 btn btn-col btn-primary border-round">
+              <i class="fas fa-shopping-cart icon-sm"></i>
+              Add to cart
+            </button>
+            <button class="m-0-05 btn btn-col btn-secondary border-round">
+              Secondary Button
+            </button>
+            <button class="m-0-05 btn btn-outline border-round">
+              Outline Button
+            </button>
+            <button class="m-0-05 btn btn-col btn-danger border-round">
+              Danger Button
+            </button>
+            <button class="m-0-05 btn btn-col btn-success border-round">
+              Success Button
+            </button>
+            <button class="m-0-05 btn btn-col btn-warning border-round">
+              Warning Button
+            </button>
+            <button class="m-0-05 btn btn-link">Link Button</button>
+            <button class="m-0-05 btn btn-icon">
+              <i class="far fa-address-card icon-xlg"></i>
+            </button>
+            <button class="m-0-05 btn btn-icon icon-text-down">
+              <i class="far fa-address-card icon-lg"></i>
+              <p class="mt-05">Profile</p>
+            </button>
+            <button class="m-0-05 btn btn-icon icon-text-right">
+              <i class="far fa-address-card icon-lg"></i>
+              <p>Profile</p>
+            </button>
+            <button
+              class="m-0-05 btn btn-col btn-secondary border-round show-float"
+            >
+              Show float button
+            </button>
+            <button class="m-0-05 btn btn-col btn-lg btn-primary border-round">
+              Primary Button
+            </button>
+            <button
+              class="m-0-05 btn btn-col btn-block btn-primary border-round"
+            >
+              Primary Button
+            </button>
+            <button
+              class="m-0-05 btn btn-col btn-primary btn-float bottom-right5 float-display"
+            >
+              <i class="fas fa-bars menu icon-lg"></i>
+            </button>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;button class="btn btn-col btn-primary border-round"&gt;
+   Primary Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-primary border-round"&gt;
+   &lt;i class="fas fa-shopping-cart icon-sm"&gt;&lt;/i&gt;
+   Add to cart
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-secondary border-round"&gt;
+   Secondary Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-danger border-round"&gt;
+   Danger Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-success border-round"&gt;
+   Success Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-warning border-round"&gt;
+   Warning Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-link"&gt;Link Button&lt;/button&gt;
+
+&lt;button class="btn btn-icon"&gt;
+   &lt;i class="far fa-address-card icon-xlg"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-icon icon-text-down"&gt;
+   &lt;i class="far fa-address-card icon-lg"&gt;&lt;/i&gt;
+   &lt;p class="mt-05"&gt;Profile&lt;/p&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-icon icon-text-right"&gt;
+   &lt;i class="far fa-address-card icon-lg"&gt;&lt;/i&gt;
+    &lt;p&gt;Profile&lt;/p&gt;
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-lg btn-primary border-round"&gt;
+    Primary Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-block btn-primary border-round"&gt;
+    Primary Button
+&lt;/button&gt;
+
+&lt;button class="btn btn-col btn-primary btn-float bottom-right5"&gt;
+    &lt;i class="fas fa-bars menu icon-lg"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+</code></pre>
+        </div>
+        <div id="cards">
+          <h1 class="mt-2 uppercase letter-spaced">Cards</h1>
+          <h2 class="mt-1">- Product Display Cards</h2>
+          <div class="grid-container web-four mob-two mt-2">
+            <div class="card-product p-05 bd1 bdGray">
+              <div class="product-img">
+                <img
+                  src="https://images.unsplash.com/photo-1570128641432-a1520efe3b1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                  alt=""
+                />
+                <button class="btn btn-icon wishlist">
+                  <i class="fas fa-heart icon-sm wishlist-icon active"></i>
+                </button>
+              </div>
+              <h1 class="product-heading mt-1">Calvin Klein Original</h1>
+              <p class="product-desc mt-05">Men Slim Fit Casual Shirt</p>
+              <h2 class="price mt-05">Rs 999</h2>
+              <div class="og-price">
+                <span class="price-cut">Rs. 1999</span>
+                <span class="discount">(55% Off)</span>
+                <span class="review bgAlertGreen colorWhite m-0-05 border-round">
+                  <span class="review-text">4.5</span>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <button class="btn btn-col btn-primary mt-1 border-round">
+                Add to Cart
+              </button>
+            </div>
+            <div class="card-product card-badge p-05 bd1 bdGray">
+              <div class="product-badge">
+                New
+                <span class="top-triangle"></span>
+                <span class="bottom-triangle"></span>
+              </div>
+              <div class="product-img">
+                <img
+                  src="https://images.unsplash.com/photo-1570128641432-a1520efe3b1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                  alt=""
+                />
+                <button class="btn btn-icon wishlist">
+                  <i class="fas fa-heart icon-sm wishlist-icon"></i>
+                </button>
+              </div>
+              <h1 class="product-heading mt-1">Levis</h1>
+              <p class="product-desc mt-05">Men Slim Fit Casual Shirt</p>
+              <h2 class="price mt-05">Rs 999</h2>
+              <div class="og-price">
+                <span class="price-cut">Rs. 1999</span>
+                <span class="discount">(55% Off)</span>
+                <span class="review bgAlertYellow colorWhite m-0-05 border-round">
+                  <span class="review-text">3</span>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <button class="btn btn-col btn-primary mt-1 border-round">
+                Add to Cart
+              </button>
+            </div>
+            <div class="card-product p-05">
+              <div class="product-img">
+                <img
+                  src="https://images.unsplash.com/photo-1570128641432-a1520efe3b1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                  alt=""
+                />
+                <button class="btn btn-icon wishlist">
+                  <i class="fas fa-heart icon-sm wishlist-icon"></i>
+                </button>
+              </div>
+              <h1 class="product-heading mt-1">Levis</h1>
+              <p class="product-desc mt-05">Men Slim Fit Casual Shirt</p>
+              <h2 class="price mt-05">Rs 999</h2>
+              <div class="og-price">
+                <span class="price-cut">Rs. 1999</span>
+                <span class="discount">(55% Off)</span>
+                <span class="review bgAlertRed colorWhite m-0-05 border-round">
+                  <span class="review-text">2</span>
+                  <i class="fas fa-star"></i>
+                </span>
+              </div>
+              <button class="btn btn-col btn-primary mt-1 border-round">
+                Add to Cart
+              </button>
+            </div>
+            <div class="card-product p-05 card-shadow">
+              <div class="product-img">
+                <img
+                  src="https://images.unsplash.com/photo-1570128641432-a1520efe3b1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                  alt=""
+                />
+                <button class="btn btn-icon wishlist">
+                  <i class="fas fa-heart icon-sm wishlist-icon"></i>
+                </button>
+              </div>
+              <h1 class="product-heading mt-1">Levis</h1>
+              <p class="product-desc mt-05">Men Slim Fit Casual Shirt</p>
+              <h2 class="price mt-05">Rs 999</h2>
+              <div class="og-price">
+                <span class="price-cut">Rs. 1999</span>
+                <span class="discount">(55% Off)</span>
+              </div>
+              <button class="btn btn-col btn-primary mt-1 border-round">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="card-product p-05 bd1 bdGray"&gt;
+   &lt;div class="product-img"&gt;
+     &lt;img src="" alt="" /&gt;
+    &lt;/div&gt;
+  	&lt;h1 class="product-heading mt-1"&gt;Calvin Klein Original&lt;/h1&gt;
+    &lt;button class="btn btn-icon wishlist"&gt;
+       &lt;i class="fas fa-heart icon-sm wishlist-icon active"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;p class="product-desc mt-05"&gt;Men Slim Fit Casual Shirt&lt;/p&gt;
+    &lt;h2 class="price mt-05"&gt;Rs 999&lt;/h2&gt;
+    &lt;div class="og-price"&gt;
+       &lt;span class="price-cut"&gt;Rs. 1999&lt;/span&gt;
+       &lt;span class="discount"&gt;(55% Off)&lt;/span&gt;
+       &lt;span class="review bgAlertGreen colorWhite m-0-05 border-round"&gt;
+          &lt;span class="review-text"&gt;4.5&lt;/span&gt;
+          &lt;i class="fas fa-star"&gt;&lt;/i&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+	&lt;button class="btn btn-col btn-primary mt-1 border-round"&gt;
+       Add to Cart
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="card-product card-badge p-05 bd1 bdGray"&gt;
+   &lt;div class="product-badge"&gt;
+      New
+      &lt;span class="top-triangle"&gt;&lt;/span&gt;
+      &lt;span class="bottom-triangle"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+	&lt;div class="product-img"&gt;
+       &lt;img src="" alt="" /&gt;
+    &lt;/div&gt;
+    &lt;h1 class="product-heading mt-1"&gt;Levis&lt;/h1&gt;
+    &lt;button class="btn btn-icon wishlist"&gt;
+       &lt;i class="fas fa-heart icon-sm wishlist-icon"&gt;&lt;/i&gt;
+     &lt;/button&gt;
+     &lt;p class="product-desc mt-05"&gt;Men Slim Fit Casual Shirt&lt;/p&gt;
+     &lt;h2 class="price mt-05"&gt;Rs 999&lt;/h2&gt;
+     &lt;div class="og-price"&gt;
+       &lt;span class="price-cut"&gt;Rs. 1999&lt;/span&gt;
+       &lt;span class="discount"&gt;(55% Off)&lt;/span&gt;
+     &lt;/div&gt;
+     &lt;button class="btn btn-col btn-primary mt-1 border-round"&gt;
+        Add to Cart
+      &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- For no border no shadow  --&gt;
+
+&lt;div class="card-product p-05"&gt;
+  &lt;!-- Card content --&gt;
+&lt;/div&gt;
+
+&lt;!-- For card with shadow  --&gt;
+
+&lt;div class="card-product p-05 card-shadow"&gt;
+  &lt;!-- Card content --&gt;
+&lt;/div&gt;
+
+</code></pre>
+          <h2 class="mt-1">- Cart Card</h2>
+          <div class="stacked-list mt-1">
+            <div class="card-cart p-1 bd1 bdGray">
+              <div class="cart-details">
+                <div class="cart-product-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1570128641432-a1520efe3b1d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1953&q=80"
+                    alt=""
+                  />
+                </div>
+                <div class="cart-product-desc">
+                  <h1 class="product-heading">Levis</h1>
+                  <p class="product-desc mt-05">Men Slim Fit Casual Shirt</p>
+                  <div class="change-quantity mt-05">
+                    <button class="btn btn-icon btn-cart">
+                      <i class="fas fa-minus icon-xxsm"></i>
+                    </button>
+                    <h2 class="quantity bd1 bdGray m-0-05">1</h2>
+                    <button class="btn btn-icon btn-cart">
+                      <i class="fas fa-plus icon-xxsm"></i>
+                    </button>
+                  </div>
+                  <button class="btn btn-link colorRed mt-1">Remove</button>
+                  <button class="btn btn-link ml-05 mt-1">
+                    Move to Wishlist
+                  </button>
+                </div>
+              </div>
+              <div class="cart-product-price">
+                <h2 class="price">Rs 999</h2>
+                <span class="price-cut">Rs. 1999</span>
+                <span class="discount">(55% Off)</span>
+              </div>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="card-cart p-1 bd1 bdGray"&gt;
+     &lt;div class="cart-details"&gt;
+        &lt;div class="cart-product-img"&gt;
+           &lt;img src="" alt="" /&gt;
+         &lt;/div&gt;
+         &lt;div class="cart-product-desc"&gt;
+            &lt;h1 class="product-heading"&gt;Levis&lt;/h1&gt;
+            &lt;p class="product-desc mt-05"&gt;Men Slim Fit Casual Shirt&lt;/p&gt;
+          	&lt;div class="change-quantity mt-05"&gt;
+            &lt;button class="btn btn-icon btn-cart"&gt;
+              &lt;i class="fas fa-minus icon-xxsm"&gt;&lt;/i&gt;
+            &lt;/button&gt;
+            &lt;h2 class="quantity bd1 bdGray m-0-05"&gt;1&lt;/h2&gt;
+            &lt;button class="btn btn-icon btn-cart"&gt;
+               &lt;i class="fas fa-plus icon-xxsm"&gt;&lt;/i&gt;
+             &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;button class="btn btn-link colorRed mt-1"&gt;Remove&lt;/button&gt;
+          &lt;button class="btn btn-link ml-05 mt-1"&gt;
+             Move to Wishlist
+          &lt;/button&gt;
+       	&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="cart-product-price"&gt;
+          &lt;h2 class="price"&gt;Rs 999&lt;/h2&gt;
+          &lt;span class="price-cut"&gt;Rs. 1999&lt;/span&gt;
+          &lt;span class="discount"&gt;(55% Off)&lt;/span&gt;
+       &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+          <h2 class="mt-1">- Social media post</h2>
+          <div class="stacked-list mt-1">
+            <div class="card-social p-1 bd1 bdGray">
+              <div class="profile-img">
+                <div class="avatar-wrapper circle av-sm">
+                  <img
+                    class="avatar-img circle"
+                    src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1900&q=80"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="social-post-text">
+                <div class="profile-details">
+                  <h1 class="profile-user">Charles Johnson</h1>
+                  <p class="profile-username">@charliejohn</p>
+                  <p class="post-time">12h</p>
+                </div>
+                <p class="post-text mt-05">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Maiores reprehenderit numquam enim repellendus excepturi in
+                  rerum dicta totam illum perspiciatis!
+                </p>
+                <button class="btn btn-icon mt-1">
+                  <i class="fas fa-heart like icon-med"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="card-social p-1 bd1 bdGray"&gt;
+    &lt;div class="profile-img"&gt;
+       &lt;div class="avatar-wrapper circle av-sm"&gt;
+          &lt;img class="avatar-img circle" src="" alt="" /&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+     &lt;div class="social-post-text"&gt;
+        &lt;div class="profile-details"&gt;
+          &lt;h1 class="profile-user"&gt;Charles Johnson&lt;/h1&gt;
+          &lt;p class="profile-username"&gt;@charliejohn&lt;/p&gt;
+          &lt;p class="post-time"&gt;12h&lt;/p&gt;
+      	&lt;/div&gt;
+        &lt;p class="post-text mt-05"&gt;
+           Lorem ipsum dolor sit amet consectetur!
+        &lt;/p&gt;
+        &lt;button class="btn btn-icon mt-1"&gt;
+            &lt;i class="fas fa-heart like icon-med"&gt;&lt;/i&gt;
+         &lt;/button&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+          <h2 class="mt-1">
+            - Image overlay card, Card with dismiss & Text only card
+          </h2>
+          <div class="grid-container web-three mob-one mt-2">
+            <div class="card-text-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt=""
+              />
+              <div class="overlay p-1">
+                <h2 class="card-heading mt-1">This is overlay heading</h2>
+                <p class="card-text mt-1">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
+                  autem iste, quae magni quasi doloremque nemo deleniti sapiente
+                  est maiores!
+                </p>
+              </div>
+            </div>
+            <div class="card-text-overlay card-dismiss">
+              <button class="btn btn-icon dismiss">
+                <i class="far fa-times-circle icon-med"></i>
+              </button>
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                alt=""
+              />
+              <div class="overlay p-1">
+                <h2 class="card-heading mt-1">This is overlay heading</h2>
+                <p class="card-text mt-1">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
+                  autem iste, quae magni quasi doloremque nemo deleniti sapiente
+                  est maiores!
+                </p>
+              </div>
+            </div>
+            <div class="card-textonly p-1 card-shadow border-round bgLightBlue">
+              <h2 class="card-heading mt-1">This is text heading</h2>
+              <p class="card-text mt-1">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab
+                autem iste, quae magni quasi doloremque nemo deleniti sapiente
+                est maiores!
+              </p>
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="card-text-overlay"&gt;
+   &lt;img src="" alt="" /&gt;
+   &lt;div class="overlay p-1"&gt;
+      &lt;h2 class="card-heading mt-1"&gt;This is overlay heading&lt;/h2&gt;
+      &lt;p class="card-text mt-1"&gt;
+         Lorem ipsum dolor, sit amet consectetur
+      &lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card-text-overlay card-dismiss"&gt;
+   &lt;button class="btn btn-icon dismiss"&gt;
+      &lt;i class="far fa-times-circle icon-med"&gt;&lt;/i&gt;
+   &lt;/button&gt;
+   &lt;img src="" alt="" /&gt;
+   &lt;div class="overlay p-1"&gt;
+     &lt;h2 class="card-heading mt-1"&gt;This is overlay heading&lt;/h2&gt;
+     &lt;p class="card-text mt-1"&gt;
+        Lorem ipsum dolor, sit amet consectetur 
+     &lt;/p&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card-textonly p-1 card-shadow border-round bgLightBlue"&gt;
+   &lt;h2 class="card-heading mt-1"&gt;This is text heading&lt;/h2&gt;
+   &lt;p class="card-text mt-1"&gt;
+      Lorem ipsum dolor, sit amet consectetur 
+   &lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+        </div>
+        <div id="navigation">
+          <h1 class="mt-2 uppercase letter-spaced">Navigation</h1>
+          <h2 class="font-size-m mt-1">
+            - Top fixed navbar (with only 3 options)
+          </h2>
+          <nav class="nav p-1 box-shadow-down mt-1">
+            <h1 class="font-size-m">Brand Name</h1>
+            <div class="menu">
+              <button class="btn btn-icon icon-text-down">
+                <i class="fas fa-store icon-med"></i>
+                <p class="mt-05">Store</p>
+              </button>
+              <button class="btn btn-icon icon-text-down">
+                <i class="fas fa-shopping-cart icon-med icon-badge">
+                  <span class="badge circle bdg-tr bdg-num bdg-blue">4</span>
+                </i>
+                <p class="mt-05">Cart</p>
+              </button>
+              <button class="btn btn-icon icon-text-down">
+                <i class="fas fa-heart icon-med icon-badge colorRed">
+                  <span class="badge circle bdg-tr bdg-num bdg-blue">1</span>
+                </i>
+                <p class="mt-05">Wishlist</p>
+              </button>
+            </div>
+          </nav>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;nav class="nav top-fixed p-1 box-shadow-down"&gt;
+  &lt;h1 class="font-size-m"&gt;Brand Name&lt;/h1&gt;
+  &lt;div class="menu"&gt;
+    &lt;button class="btn btn-icon icon-text-down"&gt;
+      &lt;i class="fas fa-store icon-med"&gt;&lt;/i&gt;
+      &lt;p class="mt-05"&gt;Store&lt;/p&gt;
+    &lt;/button&gt;
+    &lt;button class="btn btn-icon icon-text-down"&gt;
+      &lt;i class="fas fa-shopping-cart icon-med icon-badge"&gt;
+        &lt;span class="badge circle bdg-tr bdg-num bdg-blue"&gt;4&lt;/span&gt;
+      &lt;/i&gt;
+      &lt;p class="mt-05"&gt;Cart&lt;/p&gt;
+    &lt;/button&gt;
+    &lt;button class="btn btn-icon icon-text-down"&gt;
+      &lt;i class="fas fa-heart icon-med icon-badge colorRed"&gt;
+        &lt;span class="badge circle bdg-tr bdg-num bdg-blue"&gt;1&lt;/span&gt;
+      &lt;/i&gt;
+      &lt;p class="mt-05"&gt;Wishlist&lt;/p&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+        </code></pre>
+          <h2 class="font-size-m mt-1">
+            - Left fixed Navbar (floats from right on mobile, see the nav of
+            this page for working eg.)
+          </h2>
+          <p class="medium font-size-sm mt-05">Code for nav (paste in body)</p>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;nav class="leftfixed-nav p-1-0" id="menu"&gt;
+  &lt;div class="top-element"&gt;
+    &lt;a href="/" class="logo"&gt;
+      &lt;img src="/images/panda.png" alt="" /&gt;
+      &lt;h3&gt;Brandname&lt;/h3&gt;
+    &lt;/a&gt;
+    &lt;button class="m-0-05 btn btn-icon" id="menu-close"&gt;
+      &lt;i class="fas fa-times icon-med"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;a class="nav-element-link mt-05 active" href="#"&gt;Installation&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Utilities&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Text Utilities&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Alerts&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Avatars&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Badges&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Buttons&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Cards&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Navigation&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Input&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Images&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Modal&lt;/a&gt;
+  &lt;a class="nav-element-link mt-05" href=""&gt;Grids&lt;/a&gt;
+&lt;/nav&gt;
+
+</code></pre>
+          <p class="medium font-size-sm mt-05">
+            Paste this for menu button somewhere in the body
+          </p>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;button class="btn btn-col btn-primary btn-float" id="menu-btn"&gt;
+  &lt;i class="fas fa-bars menu icon-med"&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+</code></pre>
+          <p class="medium font-size-sm mt-05">
+            IMP: Give padding-left to the display section to display content
+            alongside the nav
+          </p>
+          <pre class="m-1-0"><code class="css border-round">
+.displaysection{
+  padding-left: 25%;
+}
+        </code></pre>
+        </div>
+        <div id="input">
+          <h1 class="mt-2 uppercase letter-spaced">Input</h1>
+          <div class="stacked-list mt-1">
+            <label class="inputgroup">
+              <input class="input-textbox focus-blue" placeholder=" " />
+              <span class="input-label">Name</span>
+            </label>
+            <label class="inputgroup error">
+              <input class="input-textbox" placeholder=" " />
+              <span class="input-label">Name</span>
+              <span class="error-text">Error in your input</span>
+            </label>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;label class="inputgroup"&gt;
+  &lt;input class="input-textbox focus-blue" placeholder=" " /&gt;
+  &lt;span class="input-label"&gt;Name&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class="inputgroup error"&gt;
+  &lt;input class="input-textbox" placeholder=" " /&gt;
+  &lt;span class="input-label"&gt;Name&lt;/span&gt;
+  &lt;span class="error-text"&gt;Error in your input&lt;/span&gt;
+&lt;/label&gt;
+
+</code></pre>
+        </div>
+        <div id="image">
+          <h1 class="mt-2 uppercase letter-spaced">Images</h1>
+          <div class="grid-container web-two mob-one mt-1">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80"
+                alt=""
+                class="responsive-image"
+              />
+            </div>
+            <div class="center">
+              <img
+                src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1955&q=80"
+                alt=""
+                class="width-200px height-200px circle"
+              />
+            </div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div&gt;
+  &lt;img src="" alt="" class="responsive-image" /&gt;
+&lt;/div&gt;
+
+&lt;div class="center"&gt;
+  &lt;img src="" alt="" class="width-200px height-200px circle" /&gt;
+&lt;/div&gt;
+
+</code></pre>
+        </div>
+        <div id="modals">
+          <h1 class="mt-2 uppercase letter-spaced">Modal</h1>
+          <button class="btn btn-col btn-secondary mt-1" id="modal-show">
+            See Modal
+          </button>
+          <p class="font-size-sm medium mt-05">Paste this code in your body</p>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="modal-overlay" id="modal"&gt;
+  &lt;div class="modal-container p-1 border-round"&gt;
+    &lt;h1 class="center font-size-l bold"&gt;Are you sure, you are a robot?&lt;/h1&gt;
+    &lt;div class="modal-buttons"&gt;
+      &lt;button class="btn btn-col btn-danger border-round" id="modal-close"&gt;
+        No !!
+      &lt;/button&gt;
+      &lt;button class="btn btn-col btn-success border-round" id="modal-success"&gt;
+        Yes
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+        </div>
+        <div id="grid">
+          <h1 class="mt-2 uppercase letter-spaced">Grids</h1>
+          <div class="grid-container web-two mob-one p-1 bgGray mt-2">
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+          </div>
+          <div class="grid-container web-three mob-two p-1 bgGray mt-2">
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+          </div>
+          <div class="grid-container web-four mob-two p-1 bgGray mt-2">
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+            <div class="content bgWhite"></div>
+          </div>
+          <pre class="m-1-0"><code class="html border-round">
+&lt;div class="grid-container web-two mob-one p-1 bgGray mt-2"&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grid-container web-three mob-two p-1 bgGray mt-2"&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="grid-container web-four mob-two p-1 bgGray mt-2"&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+  &lt;div class="content bgWhite"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+        </div>
+      </div>
+    </div>
+    <div class="modal-overlay" id="modal">
+      <div class="modal-container p-1 border-round">
+        <h1 class="center font-size-l bold">Are you sure, you are a robot?</h1>
+        <div class="modal-buttons">
+          <button class="btn btn-col btn-danger border-round" id="modal-close">
+            No !!
+          </button>
+          <button
+            class="btn btn-col btn-success border-round"
+            id="modal-success"
+          >
+            Yes
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
